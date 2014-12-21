@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby 2.1.2p95
+ruby '2.1.2'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -52,7 +52,8 @@ group :production do
   gem 'rails_12factor'
 end
 
-
+#Install Devise
+gem 'devise', '~> 3.4.1'
 
 
 
