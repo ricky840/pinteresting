@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -40,3 +38,33 @@ gem 'spring',        group: :development
 
 #Install bootstrap
 gem 'bootstrap-sass'
+
+#This is to use sqllite3 only on local development machine
+group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+
+#This is to instruct heroku to use in production environment
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
